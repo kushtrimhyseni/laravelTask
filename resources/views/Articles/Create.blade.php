@@ -31,6 +31,10 @@
                     <strong>Title:</strong>
                     <input type="text" name="title" class="form-control" placeholder="Title">
                 </div>
+                <div class="form-group">
+                    <strong>Content:</strong>
+                    <input type="text" name="content" class="form-control" placeholder="Content">
+                </div>
             </div>
             <div class="col-md-4">
             <div class="form-group col-md-4" style="margin-left:38px">

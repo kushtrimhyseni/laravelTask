@@ -15,7 +15,6 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::latest()->paginate(5);
-
         return view('articles.index', compact('articles'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -41,10 +40,12 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'content' => 'required',
             'is_publish' => 'required'          
         ]);
-        $form= new Article();
+        $form = new Article();
         $form->title=$request->get('title');
+        $form->content=$request->get('content');
         //$form->publish_date=strtotime($request->get('publish_date'));
         $form->publish_date=$request->get('publish_date');
         //if($request->get('is_publish') == )

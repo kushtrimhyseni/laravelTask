@@ -15,17 +15,16 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->unsigned()->index();
-            //$table->foreign('user_id')->references('id')->on('users');
             $table->string('title' ,255)->nullable();
+            $table->string('content')->nullable();
             $table->date('publish_date')->nullable();
             $table->boolean('is_publish');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable();
         });
-            Schema::table('articles', function (Blueprint $table) {
+        /*Schema::table('articles', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
-        });
+        });*/
     }
         
     /**

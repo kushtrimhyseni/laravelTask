@@ -23,6 +23,7 @@
         <tr>
             <th>Id</th>
             <th>Title</th>
+            <th>Content</th>
             <th>Published Date</th>
             <th>Status</th>
             <th>Date Created</th>
@@ -32,6 +33,8 @@
             <tr>
                 <td>{{ $article->id }}</td>
                 <td>{{ $article->title }}</td>
+        
+                <td>{{ $article->content }}</td>
                 <td>{{ $article->publish_date }}</td>
                 <td>{{ $article->is_publish? "Published":"Unpublished" }}</td>
                 <td>{{ date_format($article->created_at, 'jS M Y') }}</td>

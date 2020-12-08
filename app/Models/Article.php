@@ -13,6 +13,7 @@ class Article extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'title'
+        'title',
+        'content'
     ];
 }
